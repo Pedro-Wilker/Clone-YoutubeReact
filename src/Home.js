@@ -100,7 +100,7 @@ function Home() {
                         {['Inicio'].map((text, index) => (
                             <ListItem button key={text}>
                                 <ListItemIcon>
-                                    <HomeIcon />{/* , 'Em alta', 'Explorar', 'Inscrições' :<TrendingUpIcon />:<MoreVertIcon />:<ExploreIcon/> */}
+                                    <HomeIcon />
                                 </ListItemIcon>
                                 <ListItemText theme={theme} primary={text} />
                                 <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
@@ -120,7 +120,7 @@ function Home() {
                                 {['Explorar'].map((text, index) => (
                                     <ListItem button key={text}>
                                         <ListItemIcon>
-                                            <ExploreIcon />{/* , 'Inscrições'<MoreVertIcon /> */}
+                                            <ExploreIcon />
                                         </ListItemIcon>
                                         <ListItemText theme={theme} primary={text} />
                                         <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
@@ -162,14 +162,17 @@ function Home() {
                     <Divider />
                     <List >
                         {['Faça login para curtir vídeos,' +
-                            'comentar e se inscrever'].map((text, index) => (
+                            '  comentar e se inscrever'].map((text, index) => (
                                 <ListItem button key={text}>
                                     <ListItemText theme={theme} secondary={text} />
                                     <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                                 </ListItem>
                             ))}
                     </List>
-                    <Button href="/" startIcon={<AccountCircleIcon />} variant='outlined' color="secondary"> Fazer Login</Button>
+                    <List> 
+                        <ListItemIcon></ListItemIcon>
+                        <Button href="/" startIcon={<AccountCircleIcon />} variant='outlined' color="secondary"> Fazer Login</Button>
+                    </List>
                     <Divider />
                     <List >
                         {['O MELHOR DO YOUTUBE'].map((text, index) => (
