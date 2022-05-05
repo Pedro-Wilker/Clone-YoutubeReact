@@ -22,15 +22,28 @@ import { fontGrid } from "@mui/material/styles/cssUtils";
 import { Icon } from "@mui/material";
 import MicIcon from '@mui/icons-material/Mic';
 import HomeIcon from '@mui/icons-material/Home';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import SlowMotionVideoIcon from '@mui/icons-material/SlowMotionVideo';
 import ExploreIcon from '@mui/icons-material/Explore';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import RestoreIcon from '@mui/icons-material/Restore';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import OnlinePredictionIcon from '@mui/icons-material/OnlinePrediction';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import GamesIcon from '@mui/icons-material/Games';
+import MovieIcon from '@mui/icons-material/Movie';
+import NewspaperIcon from '@mui/icons-material/Newspaper';
+import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
+import SettingsIcon from '@mui/icons-material/Settings';
+import FlagIcon from '@mui/icons-material/Flag';
+import HelpIcon from '@mui/icons-material/Help';
+import AnnouncementIcon from '@mui/icons-material/Announcement';
 
 const theme = createTheme({
     typography: {
-        fontSize: 13,
+        fontSize: 9,
     },
 });
 
@@ -86,38 +99,29 @@ function Home() {
                     <Button href="/" startIcon={<AccountCircleIcon />} variant='outlined' color="secondary"> Fazer Login</Button>
                 </Toolbar>
             </AppBar>
-            <Drawer
-                variant="permanent"
-                sx={{
-                    width: drawerWidth,
-                    flexShrink: 0,
-                    [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
-                }}
-            >
-                <Toolbar />
-                <Box sx={{ overflow: 'auto' }}>
-                    <List>
-                        {['Inicio'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemIcon>
-                                    <HomeIcon />
-                                </ListItemIcon>
-                                <ListItemText theme={theme} primary={text} />
-                                <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                            </ListItem>
-                        ))}
+            <Box display="flex">
+                <Drawer
+                    variant="permanent"
+                    sx={{
+                        width: drawerWidth,
+                        flexShrink: 0,
+                        [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+                    }}
+                >
+                    <Toolbar />
+                    <Box sx={{ overflow: 'auto' }}>
                         <List>
-                            {['Em alta'].map((text, index) => (
+                            {['Inicio'].map((text) => (
                                 <ListItem button key={text}>
                                     <ListItemIcon>
-                                        <TrendingUpIcon />
+                                        <HomeIcon />
                                     </ListItemIcon>
                                     <ListItemText theme={theme} primary={text} />
                                     <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                                 </ListItem>
                             ))}
                             <List>
-                                {['Explorar'].map((text, index) => (
+                                {['Explorar'].map((text) => (
                                     <ListItem button key={text}>
                                         <ListItemIcon>
                                             <ExploreIcon />
@@ -127,121 +131,123 @@ function Home() {
                                     </ListItem>
                                 ))}
                                 <List>
-                                    {['Inscrições'].map((text, index) => (
+                                    {['Shorts'].map((text) => (
                                         <ListItem button key={text}>
                                             <ListItemIcon>
-                                                <SubscriptionsIcon />
+                                                <SlowMotionVideoIcon />
                                             </ListItemIcon>
                                             <ListItemText theme={theme} primary={text} />
                                             <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                                         </ListItem>
                                     ))}
+                                    <List>
+                                        {['Inscrições'].map((text) => (
+                                            <ListItem button key={text}>
+                                                <ListItemIcon>
+                                                    <SubscriptionsIcon />
+                                                </ListItemIcon>
+                                                <ListItemText theme={theme} primary={text} />
+                                                <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
+                                            </ListItem>
+                                        ))}
+                                    </List>
                                 </List>
                             </List>
                         </List>
-                    </List>
-                    <Divider />
-                    <List>
-                        {['Biblioteca'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemIcon><VideoLibraryIcon /></ListItemIcon>
-                                <ListItemText theme={theme} primary={text} />
-                                <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                            </ListItem>
-                        ))}
+                        <Divider />
                         <List>
-                            {['Historico'].map((text, index) => (
+                            {['Biblioteca'].map((text) => (
                                 <ListItem button key={text}>
-                                    <ListItemIcon><RestoreIcon /></ListItemIcon>
+                                    <ListItemIcon><VideoLibraryIcon /></ListItemIcon>
                                     <ListItemText theme={theme} primary={text} />
                                     <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                                 </ListItem>
                             ))}
+                            <List>
+                                {['Historico'].map((text) => (
+                                    <ListItem button key={text}>
+                                        <ListItemIcon><RestoreIcon /></ListItemIcon>
+                                        <ListItemText theme={theme} primary={text} />
+                                        <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
+                                    </ListItem>
+                                ))}
+                            </List>
                         </List>
-                    </List>
-                    <Divider />
-                    <List >
-                        {['Faça login para curtir vídeos,' +
-                            '  comentar e se inscrever'].map((text, index) => (
-                                <ListItem button key={text}>
-                                    <ListItemText theme={theme} secondary={text} />
-                                    <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                                </ListItem>
-                            ))}
-                    </List>
-                    <List> 
-                        <ListItemIcon></ListItemIcon>
-                        <Button href="/" startIcon={<AccountCircleIcon />} variant='outlined' color="secondary"> Fazer Login</Button>
-                    </List>
-                    <Divider />
-                    <List >
-                        {['O MELHOR DO YOUTUBE'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemText theme={theme} secondary={text} />
-                                <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                            </ListItem>
-                        ))}
-                    </List>
-                    <Divider />
-                    <List >
-                        {['Procurar canais'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemText theme={theme} secondary={text} />
-                                <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                            </ListItem>
-                        ))}
+                        <Divider />
+                        <Box p={2}>
+                            <List >
+                                {['Faça login para curtir vídeos, comentar e ' +
+                                    'se inscrever'].map((text) => (
+                                        <ListItem button key={text}>
+                                            <ListItemText theme={theme} secondary={text} />
+                                            <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
+                                        </ListItem>
+                                    ))}
+                                <List>
+                                    <Button href="/" startIcon={<AccountCircleIcon />} variant='outlined' color="secondary"> Fazer Login</Button>
+                                </List>
+                            </List>
+                        </Box>
+                        <Divider />
                         <List >
-                            {['Procurar canais'].map((text, index) => (
+                            {['O MELHOR DO YOUTUBE'].map((text) => (
                                 <ListItem button key={text}>
                                     <ListItemText theme={theme} secondary={text} />
                                     <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                                 </ListItem>
                             ))}
                             <List >
-                                {['Procurar canais'].map((text, index) => (
+                                {['Musicas'].map((text) => (
                                     <ListItem button key={text}>
+                                        <ListItemIcon><MusicNoteIcon /></ListItemIcon>
                                         <ListItemText theme={theme} secondary={text} />
                                         <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                                     </ListItem>
                                 ))}
                                 <List >
-                                    {['Procurar canais'].map((text, index) => (
+                                    {['Esportes'].map((text) => (
                                         <ListItem button key={text}>
+                                            <ListItemIcon><EmojiEventsIcon /></ListItemIcon>
                                             <ListItemText theme={theme} secondary={text} />
                                             <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                                         </ListItem>
                                     ))}
                                     <List >
-                                        {['Procurar canais'].map((text, index) => (
+                                        {['Jogos'].map((text) => (
                                             <ListItem button key={text}>
+                                                <ListItemIcon><GamesIcon /></ListItemIcon>
                                                 <ListItemText theme={theme} secondary={text} />
                                                 <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                                             </ListItem>
                                         ))}
                                         <List >
-                                            {['Procurar canais'].map((text, index) => (
+                                            {['Filmes'].map((text) => (
                                                 <ListItem button key={text}>
+                                                    <ListItemIcon><MovieIcon /></ListItemIcon>
                                                     <ListItemText theme={theme} secondary={text} />
                                                     <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                                                 </ListItem>
                                             ))}
                                             <List >
-                                                {['Procurar canais'].map((text, index) => (
+                                                {['Notícias'].map((text) => (
                                                     <ListItem button key={text}>
+                                                        <ListItemIcon><NewspaperIcon /></ListItemIcon>
                                                         <ListItemText theme={theme} secondary={text} />
                                                         <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                                                     </ListItem>
                                                 ))}
                                                 <List >
-                                                    {['Procurar canais'].map((text, index) => (
+                                                    {['Ao vivo'].map((text) => (
                                                         <ListItem button key={text}>
+                                                            <ListItemIcon><OnlinePredictionIcon /></ListItemIcon>
                                                             <ListItemText theme={theme} secondary={text} />
                                                             <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                                                         </ListItem>
                                                     ))}
                                                     <List >
-                                                        {['Procurar canais'].map((text, index) => (
+                                                        {['Aprender'].map((text) => (
                                                             <ListItem button key={text}>
+                                                                <ListItemIcon><EmojiObjectsIcon /></ListItemIcon>
                                                                 <ListItemText theme={theme} secondary={text} />
                                                                 <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                                                             </ListItem>
@@ -254,72 +260,110 @@ function Home() {
                                 </List>
                             </List>
                         </List>
-                    </List>
-                    <Divider />
-                    <List >
-                        {['Mais do Youtube'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemText theme={theme} primary={text} />
-                                <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                            </ListItem>
-                        ))}
-                    </List>
-                    <List >
-                        {['Procurar canais'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemText theme={theme} secondary={text} />
-                                <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                            </ListItem>
-                        ))}
-                    </List>
-                    <Divider />
-                    <List >
-                        {['Mais do Youtube'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemText theme={theme} secondary={text} />
-                                <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                            </ListItem>
-                        ))}
-                    </List>
-                    <List >
-                        {['Mais do Youtube'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemText theme={theme} secondary={text} />
-                                <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                            </ListItem>
-                        ))}
-                    </List>
-                    <List >
-                        {['Mais do Youtube'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemText theme={theme} secondary={text} />
-                                <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                            </ListItem>
-                        ))}
-                    </List>
-                    <List >
-                        {['Mais do Youtube'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemText theme={theme} secondary={text} />
-                                <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                            </ListItem>
-                        ))}
-                    </List>
-                    <Divider />
-                    <div>
+                        <Divider />
                         <List >
-                            {['SobreImprensaDireitos autoraisEntre em contatoCriadores de conteúdoPublicidadeDesenvolvedores' +
-                                'TermosPrivacidadePolítica e segurançaComo funciona o YouTubeTestar os novos recursos' +
-                                '© 2022 Google LLC '].map((text, index) => (
+                            {['Procurar canais'].map((text) => (
+                                <ListItem button key={text}>
+                                    <ListItemIcon> <AddCircleOutlineIcon /></ListItemIcon>
+                                    <ListItemText theme={theme} primary={text} />
+                                    <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
+                                </ListItem>
+                            ))}
+                        </List >
+                        <Divider />
+                        <List >
+                            {['Mais do Youtube'].map((text) => (
+                                <ListItem button key={text}>
+                                    <ListItemText theme={theme} primary={text} />
+                                    <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
+                                </ListItem>
+                            ))}
+                            <List >
+                                {['Youtube Premium'].map((text) => (
                                     <ListItem button key={text}>
+                                        <ListItemIcon> <YouTubeIcon /></ListItemIcon>
                                         <ListItemText theme={theme} secondary={text} />
                                         <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                                     </ListItem>
                                 ))}
+                                <List >
+                                    {['Ao vivo'].map((text) => (
+                                        <ListItem button key={text}>
+                                            <ListItemIcon> <OnlinePredictionIcon /></ListItemIcon>
+                                            <ListItemText theme={theme} secondary={text} />
+                                            <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
+                                        </ListItem>
+                                    ))}
+                                </List>
+                            </List>
                         </List>
-                    </div>
+                        <Divider />
+                        <List >
+                            {['Configurações'].map((text) => (
+                                <ListItem button key={text}>
+                                    <ListItemIcon><SettingsIcon /></ListItemIcon>
+                                    <ListItemText theme={theme} secondary={text} />
+                                    <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
+                                </ListItem>
+                            ))}
+                        </List>
+                        <List >
+                            {['Histórico de denúncias'].map((text) => (
+                                <ListItem button key={text}>
+                                    <ListItemIcon><FlagIcon /></ListItemIcon>
+                                    <ListItemText theme={theme} secondary={text} />
+                                    <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
+                                </ListItem>
+                            ))}
+                        </List>
+                        <List >
+                            {['Ajuda'].map((text) => (
+                                <ListItem button key={text}>
+                                    <ListItemIcon><HelpIcon /></ListItemIcon>
+                                    <ListItemText theme={theme} secondary={text} />
+                                    <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
+                                </ListItem>
+                            ))}
+                        </List>
+                        <List >
+                            {['Enviar feedback'].map((text) => (
+                                <ListItem button key={text}>
+                                    <ListItemIcon><AnnouncementIcon /></ListItemIcon>
+                                    <ListItemText theme={theme} secondary={text} />
+                                    <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
+                                </ListItem>
+                            ))}
+                        </List>
+                        <Divider />
+                        <div>
+                            <List >
+                                {['Sobre essa pagina: ' + '\n ' +
+                                    'Foi desenvolvida por ' +
+                                    'Pedro Wilker. \n ' + ' Direitos autoriais: Youtube. @2022Reference: "Vai ter volta"'].map((text) => (
+                                        <ListItem button key={text}>
+                                            <ListItemText theme={theme} secondary={text} />
+                                            <Typography theme={theme} variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
+                                        </ListItem>
+                                    ))}
+                            </List>
+                        </div>
+                    </Box>
+                </Drawer>
+
+
+                <Box p={2}>
+                    <Toolbar />
+                    <Typography
+                        variant='h5'
+                        color='textPrimary'
+                        style={{ fontWeight:600 }}
+                    >
+                        <Divider />
+                        Recomendados 
+                        <Divider />
+                    </Typography>
                 </Box>
-            </Drawer>
+            </Box>
         </div>
     )
 }
