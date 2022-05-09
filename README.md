@@ -15,34 +15,39 @@
 ## Mais sobre o Projeto
 
 
-Com MuiMaterial dividi a pagina em três parte a appbar, sendo a barra de cima do projeto onde fica "fazer login" e outras interações, Drawer ou a barra ao lado da pagina, com os botões de "Início" "Histórico"... Onde foi criada uma interação com a ferramenta "Hidden" do @MuiMaterial para se ajustar ao tamanho da tela, ficando o mais proximo o possivel do site origial (youtube.com).
+Com MuiMaterial dividi a pagina em três parte a appbar, sendo a barra de cima do projeto onde fica "fazer login" e outras interações, Drawer ou a barra ao lado da pagina, com os botões de "Início" "Histórico"... Onde foi criada uma interação com a ferramenta "Hidden" do @MuiMaterial para se ajustar ao tamanho da tela, ficando o mais proximo o possivel do site origial (youtube.com), dentro de Hidden utilizei a ferramenta Drawer para fazer a barra ao lado, Hidden estava dentro de uma Box(ferramenta do @MuiMaterial) para interagir com a parte dos vídeos. Bom a parte dos vídeos foram utilizadas tanto a ferramenta Box, Typography e Grid, para criar um espaço para cada vídeo e um estilo utilizado para os mesmos. 
 
-Todas as thumbs(imagem do video) foram criadas pelo criador do projeto mas a maioria dos videos são do youtube e os links dos mesmos estão no final da documentação
+Todas as thumbs(imagem do vídeo) foram criadas pelo criador do projeto mas a maioria dos videos são do youtube e os links dos mesmos estão no final da documentação
 
-As ferramentas do MuiMaterial utilizdas foram:
-  -Hidden.
+
+
+## Ferramentas do MuiMaterial utilizadas:
+
+  -Hidden/@mui/material
   
-  -Grid.
+  -Grid/@mui/material
   
-  -AppBar.
+  -AppBar/@mui/material
   
-  -Drawer.
+  -Drawer/@mui/material
   
-  -List.
+  -List/@mui/material
   
-  -ThemeProvider.
+  -ThemeProvider/@mui/material
   
-  -ListItemText.
+  -ListItemText/@mui/material
   
-  -ListItemIcon.
+  -ListItemIcon/@mui/material
   
-  -IconButton.
+  -IconButton/@mui/material
   
-  -Box.
+  -Box/@mui/material
   
-  -Button.
+  -Button/@mui/material
   
-  -Divider.
+  -Divider/@mui/material
+  
+  -Icons/@mui/icons-material
   
   -Essas ferramentas são encontradas em: https://mui.com
  
