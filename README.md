@@ -1,24 +1,19 @@
-# Projeto: Clone-Youtube
+## Projeto: Clone-Youtube
 
 -Este projeto foi criado exclusivamente para estudos sobre o React.
 
 -Projeto criado por: Pedro Wilker.
 
-
 ## Bibliotecas Utilizadas
 
-
--Neste projeto eu utilizei a biblioteca Material-UI ou @MuiMaterial 
--@MuiMaterial é uma biblioteca de abstração nivel 3 utilizada em ReactJS
-
+-Nesse projeto, com a finalidade de aprimorar o conjunto dos elementos da interface do usuário, fez-se uso da biblioteca Material-UI ou @MuiMaterial. Uma biblioteca de abstração nivel 3 utilizada em ReactJS, cujo acervo de componentes possui vasto recurso pronto, acelerando consideravelmente o tempo de produção.
 
 ## Mais sobre o Projeto
 
-
-Com MuiMaterial dividi a pagina em três parte a appbar, sendo a barra de cima do projeto onde fica "fazer login" e outras interações, Drawer ou a barra ao lado da pagina, com os botões de "Início" "Histórico"... Onde foi criada uma interação com a ferramenta "Hidden" do @MuiMaterial para se ajustar ao tamanho da tela, ficando o mais proximo o possivel do site origial (youtube.com), dentro de Hidden utilizei a ferramenta Drawer para fazer a barra ao lado, Hidden estava dentro de uma Box(ferramenta do @MuiMaterial) para interagir com a parte dos vídeos. Bom a parte dos vídeos foram utilizadas tanto a ferramenta Box, Typography e Grid, para criar um espaço para cada vídeo e um estilo utilizado para os mesmos. 
-
-Todas as thumbs(imagem do vídeo) foram criadas pelo criador do projeto mas a maioria dos videos são do youtube e os links dos mesmos estão no final da documentação
-
+Com MuiMaterial, foi dividida a pagina em três partes:
+Appbar, sendo a barra de cima do projeto onde fica "fazer login" e outras interações.
+Drawer ou barra ao lado da pagina, com os botões de navegação, como início e histórico. Nela foi criada uma interação com a ferramenta "Hidden" do @MuiMaterial para se ajustar ao tamanho da tela, ficando o mais proximo o possivel do site original (youtube.com), dentro de Hidden, utilizei a ferramenta Drawer para fazer a barra ao lado, Hidden estava dentro de uma Box(ferramenta do @MuiMaterial) para interagir com a parte dos vídeos. Uma parte considerável dos vídeos, para criar um espaço para cada vídeo e um estilo utilizado, exigiram o uso das ferramentas Box, Typography e Grid.
+Ademais, todas as thumbnail’s (Miniaturas de imagens designadas ao vídeo para facilitar o processo de busca) foram desenvolvidas pelo criador do projeto. No entanto, a maioria dos videos são do youtube e as referências dos mesmos se encontram no final da documentação
 
 
 ## Ferramentas do MuiMaterial utilizadas:
