@@ -1,6 +1,6 @@
 import React from 'react';
 import { createTheme, ThemeProvider} from '@mui/material/styles';
-import Home from './Home';
+import Home from './components/Home';
 
 
 function App() {
